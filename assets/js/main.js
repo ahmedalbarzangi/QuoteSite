@@ -25,8 +25,8 @@ app.controller('laadQuotes', function($scope, $http) {
 	$scope.formatDate = function(date){
 
 		var date = new Date(date * 1000);
-		var dateObject = date.getFullYear() +'/'+ ('0' + (date.getMonth() + 1)).slice(-2) +'/'+ ('0' + date.getDate()).slice(-2);
-		return dateObject;
+		//var dateObject = date.getFullYear() +'/'+ ('0' + (date.getMonth() + 1)).slice(-2) +'/'+ ('0' + date.getDate()).slice(-2);
+		return date;
 		//var date = date.split("-").join("/");
 		//var dateOut = new Date(date);
 		//return dateOut;
