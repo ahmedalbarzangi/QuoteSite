@@ -22,7 +22,7 @@ $quotes_array = array("quotes"=> array(
 )
 );
 
-echo file_get_contents("http://8455218b.ngrok.io/quotes");
+echo file_get_contents("http://toaster.vdeute.com:8000/quotes");
 //echo json_encode($quotes_array);
 
 ?>
