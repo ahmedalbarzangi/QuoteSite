@@ -16,7 +16,7 @@ app.controller('laadQuotes', function($scope, $http) {
 	}).success(function(data, status) {
 
 		//console.log(data);
-		$scope.quotes = angular.fromJson(data);
+		$scope.quotes = angular.fromJson(data.data);
 		//console.log($scope.quotes);
 	}).error(function(data, status) {
 		// Some error occurred
