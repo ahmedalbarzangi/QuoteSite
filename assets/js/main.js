@@ -8,7 +8,7 @@ var api_url = "";
 
 var app = angular.module('ITLounge', []);
 
-app.controller('laadQuotes', function($scope, $http) {
+app.controller('laadQuotes', ['$scope', 'zoeken', function($scope, someService){
 
 	$http({
 		method: 'GET',
@@ -32,17 +32,20 @@ app.controller('laadQuotes', function($scope, $http) {
 		//return dateOut;
 	};
 
-});
+	var callback = function(){
+		$scope.$apply()
+	}
 
-app.controller('searchController', ['$scope', 'zoeken', function($scope, someService){
 	$scope.search = function(){
 		someService.search($scope.keywords).then(function(response){
 			//$scope.response = response.data;
 			$scope.quotes = angular.fromJson(response.data);
+			laadQuotes();
 		});
 	};
 
-}]);
+});
+
 
 app.service('zoeken', ['$http', function($http){
 	return {
