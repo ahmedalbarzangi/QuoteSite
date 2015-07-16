@@ -12,18 +12,32 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.sass">
+    <link rel="stylesheet" href="styles/main.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- endbuild -->
 </head>
 <body ng-app="quoteSiteApp">
 
 <div class="header">
+    <md-content>
+        <md-toolbar md-scroll-shrink>
+            <div class="md-toolbar-tools md-tall">
+                <div layout="column" layout-align="center center" flex>
+                    <div>
+                        <h2>QuoteSite</h2>
+                    </div>
 
+                    <div>
+                        <h3>Omdat het kan</h3>
+                    </div>
+                </div>
+            </div>
+        </md-toolbar>
+    </md-content>
 </div>
 
-<div class="container">
-    <div ng-view=""></div>
+<div layout="column" ng-view="">
+
 </div>
 
 <div class="footer">

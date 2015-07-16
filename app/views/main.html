@@ -1,5 +1,8 @@
-<div ng-repeat="quote in main.quotes">
-    <p>{{quote.user_name}}</p>
-
-    <p>{{quote.text}}</p>
-</div>
+<md-content layout-fill flex layout-align="center start" layout>
+    <div class="main-container" layout-fill>
+        <div ng-repeat="quote in main.quotes">
+            <span class="md-headline">{{quote.text}}</span>
+            <span class="md-caption">~{{quote.user_name}}</span>
+        </div>
+    </div>
+</md-content>
