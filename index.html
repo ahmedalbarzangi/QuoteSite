@@ -44,8 +44,7 @@
 										<!--  -->
 									</section>
 								<section ng-show="(quotes | filter:query).length == 0">
-									<blockquote>{{ quote.text }}</blockquote>
-									<span>Door: {{ quote.user_name }} op {{formatDate(quote.timestamp) |  date:"dd/MM/yyyy HH:mm:ss" }}</span>
+									<p>De zoekopdracht heeft geen resultaten opgeleverd.</p>
 									<!--  -->
 								</section>
 
