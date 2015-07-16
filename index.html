@@ -35,18 +35,20 @@
 
 						</header>
 						<div class="row">
-							<div class="6u 12u(mobile)" ng-repeat="quote in quotes | filter:query">
+							<div class="12u 12u(mobile)">
 
 								<!-- Feature -->
-									<section>
+									<section ng-repeat="quote in quotes | filter:query">
 										<blockquote>{{ quote.text }}</blockquote>
 										<span>Door: {{ quote.user_name }} op {{formatDate(quote.timestamp) |  date:"dd/MM/yyyy HH:mm:ss" }}</span>
 										<!--  -->
 									</section>
+								<section ng-show="(quotes | filter:query).length == 0">
+									<blockquote>{{ quote.text }}</blockquote>
+									<span>Door: {{ quote.user_name }} op {{formatDate(quote.timestamp) |  date:"dd/MM/yyyy HH:mm:ss" }}</span>
+									<!--  -->
+								</section>
 
-							</div>
-							<div class="6u 12u(mobile)" ng-show="(quotes | filter:query).length == 0">
-								<p>De zoekopdracht heeft geen zoekresultaten...</p>
 							</div>
 
 						</div>
