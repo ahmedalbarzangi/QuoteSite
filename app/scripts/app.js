@@ -9,20 +9,29 @@
  * Main module of the application.
  */
 angular
-  .module('quoteSiteApp', [
-    'ngRoute'
-  ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+    .module('quoteSiteApp', [
+        'ngRoute',
+        'ngMaterial'
+    ])
+
+    // Material Design theme config.
+    .config(function ($mdThemingProvider) {
+        // Default theme.
+        $mdThemingProvider.theme('default')
+            .primaryPalette('blue')
+            .accentPalette('light-blue');
+
+        $mdThemingProvider.setDefaultTheme('default');
+    })
+
+    // Route provider config.
+    .config(function ($routeProvider) {
+        $routeProvider
+            .when('/', {
+                templateUrl: 'views/main.html',
+                controller: 'MainCtrl'
+            })
+            .otherwise({
+                redirectTo: '/'
+            });
+    });
