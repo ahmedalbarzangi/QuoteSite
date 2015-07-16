@@ -31,11 +31,11 @@
 				<div id="features-wrapper" ng-controller="laadQuotes">
 					<section id="features" class="container">
 						<header>
-							<h2>Zoek een quote: <input type="text" name="zoekquote" ng-model="query" placeholder="Zoek een quote..." /></h2>
+							<h2>Zoek een quote: <input type="text" name="zoekquote" ng-model="keywords" placeholder="Zoek een quote..." ng-change="search()" /></h2>
 
 						</header>
 						<div class="row">
-							<div class="6u 12u(mobile)" ng-repeat="quote in quotes | filter:query">
+							<div class="6u 12u(mobile)" ng-repeat="quote in quotes">
 
 								<!-- Feature -->
 									<section>
@@ -45,9 +45,7 @@
 									</section>
 
 							</div>
-							<div class="6u 12u(mobile)" ng-show="(quotes | filter:query).length == 0">
-								<p>De zoekopdracht heeft geen zoekresultaten...</p>
-							</div>
+
 
 						</div>
 						<!--<ul class="actions">-->

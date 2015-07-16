@@ -22,7 +22,12 @@ $quotes_array = array("quotes"=> array(
 )
 );
 
-echo file_get_contents("http://toaster.vdeute.com:8000/quotes");
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    echo file_get_contents("http://toaster.vdeute.com:8000/quotes?q=".urlencode($_POST['zoekwoord']));
+}
+else {
+    echo file_get_contents("http://toaster.vdeute.com:8000/quotes");
+}
 //echo json_encode($quotes_array);
 
 ?>

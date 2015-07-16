@@ -34,6 +34,23 @@ app.controller('laadQuotes', function($scope, $http) {
 
 });
 
+app.controller('searchController', ['$scope', 'zoeken', function($scope, someService){
+	$scope.search = function(){
+		someService.search($scope.keywords).then(function(response){
+			//$scope.response = response.data;
+			$scope.quotes = angular.fromJson(response.data);
+		});
+	};
+
+}]);
+
+app.service('zoeken', ['$http', function($http){
+	return {
+		search: function(keywords){
+			return $http.post('/test.php', { "zoekwoord" : keywords });
+		}
+	}
+}]);
 
 
 (function($) {
