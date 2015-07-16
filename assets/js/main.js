@@ -44,8 +44,12 @@ app.controller('laadQuotes', ['$scope', 'zoeken', function($scope, someService){
 		});
 	};
 
-});
+}]);
 
+//app.controller('searchController', ['$scope', 'zoeken', function($scope, someService){
+//
+//
+//}]);
 
 app.service('zoeken', ['$http', function($http){
 	return {
