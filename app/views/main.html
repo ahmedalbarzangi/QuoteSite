@@ -1,8 +1,22 @@
-<md-content layout-fill flex layout-align="center start" layout>
-    <div class="main-container" layout-fill>
-        <div ng-repeat="quote in main.quotes">
-            <span class="md-headline">{{quote.text}}</span>
-            <span class="md-caption">~{{quote.user_name}}</span>
+<md-content layout-fill flex layout-align="center start" layout class="quote-content">
+    <div class="main-container" layout-fill flex layout="row">
+        <div flex="50">
+            <md-card ng-repeat="quote in main.quotes" ng-if="$even"  class="quote-card">
+                <md-card-content>
+                    <h2 class="md-title">{{quote.text}}</h2>
+
+                    <p>{{quote.user_name}}</p>
+                </md-card-content>
+            </md-card>
+        </div>
+        <div flex="50">
+            <md-card ng-repeat="quote in main.quotes" ng-if="$odd" class="quote-card">
+                <md-card-content>
+                    <h2 class="md-title">{{quote.text}}</h2>
+
+                    <p>{{quote.user_name}}</p>
+                </md-card-content>
+            </md-card>
         </div>
     </div>
 </md-content>

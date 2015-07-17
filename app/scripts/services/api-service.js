@@ -14,7 +14,8 @@ angular.module('quoteSiteApp')
             return $http({
                 method: 'GET',
                 cache: true,
-                url: quoteSiteConfig.API_URL + 'quotes'
+                //url: quoteSiteConfig.API_URL + 'quotes'
+                url: 'json/getQuotes.json'
             });
         };
 
@@ -22,7 +23,8 @@ angular.module('quoteSiteApp')
             return $http({
                 method: 'GET',
                 cache: true,
-                url: quoteSiteConfig.API_URL + 'quotes?q' + query
+                //url: quoteSiteConfig.API_URL + 'quotes?q' + query
+                url: 'json/getQuotes.json'
             });
         };
     });
