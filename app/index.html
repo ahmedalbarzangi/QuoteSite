@@ -18,20 +18,16 @@
 </head>
 <body ng-app="quoteSiteApp">
 
-<div>
-    <md-toolbar>
-        <div class="md-toolbar-tools md-header">
-            <div layout="column" layout-align="center center" flex>
-                <div>
-                    <h2><span class="md-display-4">QuoteSite</span></h2>
-                </div>
-
-                <div>
-                    <h3>Omdat het kan</h3>
-                </div>
-            </div>
+<div class="md-header" layout="column">
+    <div layout="column" layout-align="center center" flex>
+        <div>
+            <span class="md-display-3">QuoteSite</span>
         </div>
-    </md-toolbar>
+
+        <div>
+            <span class="md-title">Omdat het kan</span>
+        </div>
+    </div>
 </div>
 
 <div layout="column" ng-view="">
@@ -57,6 +53,7 @@
 <script src="scripts/controllers/main.js"></script>
 <script src="scripts/services/api-service.js"></script>
 <script src="scripts/services/quote-site-config.js"></script>
+<script src="scripts/filters/quote-filter.js"></script>
 <!-- endbuild -->
 </body>
 </html>

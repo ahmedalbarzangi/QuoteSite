@@ -9,11 +9,24 @@ body,
   max-width: 960px
 
 .md-header
+  max-height: 640px
+  height: 33%
   background: url(../images/header_background.png) bottom center no-repeat
-  min-height: 320px
+  color: white
 
 .quote-content
   padding: 16px
-  
+  word-break: break-word
+
 .quote-card
   margin: 16px 8px
+
+  .md-caption
+    font-style: italic
+    color: #cccccc
+
+  &.search-card
+    background-color: #BBDEFB
+
+    md-input-container
+      padding-bottom: 0
