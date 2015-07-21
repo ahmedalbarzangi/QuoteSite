@@ -1,0 +1,59 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <title>QuoteSite</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css"/>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- endbuild -->
+</head>
+<body ng-app="quoteSiteApp">
+
+<div class="md-header" layout="column">
+    <div layout="column" layout-align="center center" flex>
+        <div>
+            <span class="md-display-3">QuoteSite</span>
+        </div>
+
+        <div>
+            <span class="md-title">Omdat het kan</span>
+        </div>
+    </div>
+</div>
+
+<div layout="column" ng-view="">
+
+</div>
+
+<div class="footer">
+
+</div>
+
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/angular-material/angular-material.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/main.js"></script>
+<script src="scripts/services/api-service.js"></script>
+<script src="scripts/services/quote-site-config.js"></script>
+<script src="scripts/filters/quote-filter.js"></script>
+<!-- endbuild -->
+</body>
+</html>
