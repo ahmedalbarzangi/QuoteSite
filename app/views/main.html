@@ -15,7 +15,7 @@
 <md-content layout-fill flex layout-align="center start" layout class="quote-content">
     <div class="main-container" layout-fill flex layout="row" hide="sm" show-sm>
         <div>
-            <md-card ng-repeat="quote in main.quotes | quoteFilter:searchQuery | orderBy:'timestamp':true"
+            <md-card ng-repeat="quote in main.quotes | quoteFilter:searchQuery | orderBy:'-timestamp'"
                      class="quote-card">
                 <md-card-content>
                     <h2 class="md-title">{{quote.text}}</h2>
@@ -29,7 +29,7 @@
 
     <div class="main-container" layout-fill flex layout="row" hide-sm>
         <div flex="50">
-            <md-card ng-repeat="quote in main.quotes | quoteFilter:searchQuery | orderBy:'timestamp'" ng-if="$even"
+            <md-card ng-repeat="quote in main.quotes | quoteFilter:searchQuery | orderBy:'-timestamp'" ng-if="$even"
                      class="quote-card">
                 <md-card-content>
                     <h2 class="md-title">{{quote.text}}</h2>
@@ -40,7 +40,7 @@
             </md-card>
         </div>
         <div flex="50">
-            <md-card ng-repeat="quote in main.quotes | quoteFilter:searchQuery | orderBy:'timestamp'" ng-if="$odd"
+            <md-card ng-repeat="quote in main.quotes | quoteFilter:searchQuery | orderBy:'-timestamp'" ng-if="$odd"
                      class="quote-card">
                 <md-card-content>
                     <h2 class="md-title">{{quote.text}}</h2>
